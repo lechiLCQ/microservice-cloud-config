@@ -13,7 +13,7 @@ mybatis:
 spring:
   profiles: dev  #开发环境
   application:
-    name: microservice-product-config      #服务于服务之间相互调用一般都是根据这个name
+    name: microservice-provider-config      #服务于服务之间相互调用一般都是根据这个name
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    #当前数据源操作类型
     driver-class-name: com.mysql.jdbc.Driver        #mysql驱动包
@@ -45,7 +45,7 @@ mybatis:
 spring:
   profiles: prod  #开发环境
   application:
-    name: microservice-product-config      #服务于服务之间相互调用一般都是根据这个name
+    name: microservice-provider-config      #服务于服务之间相互调用一般都是根据这个name
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    #当前数据源操作类型
     driver-class-name: com.mysql.jdbc.Driver        #mysql驱动包
