@@ -1,5 +1,5 @@
 ﻿#注意:如果在记事本上编写，下面的缩进不要使用Tab来缩进，不然报错
-spring:
+spring: 
   profiles:
     active: dev   #激活开发环境配置
 #服务提供者provider
@@ -10,7 +10,7 @@ mybatis:
   type-aliases-package: com.lechi.demo.entities              #所有Entity别名类所在包
   mapper-locations: classpath:mybatis/mapper/**/*.xml   #mapper映射文件
 
-spring:
+spring: 
   profiles: dev  #开发环境
   application:
     name: microservice-provider-config      #服务于服务之间相互调用一般都是根据这个name
@@ -20,29 +20,29 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT   #数据库名称
     username: root
     password: 123456
-    dbcp2:
+    dbcp2: 
       min-idle: 5       #数据库连接池最小维持连接数
       initial-size: 5   #初始化连接数
       max-total: 5      #最大连接数
       max-wait-millis: 150  #等待连接获取的最大超时时间
-eureka:
-  client:
+eureka: 
+  client: 
     register-with-eureka: true #服务注册开关
     fetch-registry: true #服务发现开关
     service-url:    #注册到哪一个Eureka Server服务注册中心，多个中间用逗号分隔
       defaultZone: http://server1:8003/eureka,http://server2:8004/eureka
-  instance:
+  instance: 
     instance-id: ${spring.application.name}:${server.port}   #指明实例ID
     prefer-ip-address: true #访问路径就会显示ip地址
 ---
-server:
+server: 
   port: 8001
-mybatis:
+mybatis: 
   config-location: classpath:mybatis/mybatis.cfg.xml    #mybatis配置文件所在路径
   type-aliases-package: com.lechi.demo.entities              #所有Entity别名类所在包
   mapper-locations: classpath:mybatis/mapper/**/*.xml   #mapper映射文件
 
-spring:
+spring: 
   profiles: prod  #开发环境
   application:
     name: microservice-provider-config      #服务于服务之间相互调用一般都是根据这个name
@@ -57,7 +57,7 @@ spring:
       initial-size: 5   #初始化连接数
       max-total: 5      #最大连接数
       max-wait-millis: 150  #等待连接获取的最大超时时间
-eureka:
+eureka: 
   client:
     register-with-eureka: true #服务注册开关
     fetch-registry: true #服务发现开关
